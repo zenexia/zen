@@ -1,0 +1,4 @@
+/vendor/
+.idea/
+ui/web/public/libs/
+node_modules/

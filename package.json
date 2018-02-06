@@ -1,0 +1,33 @@
+{
+  "name": "cv-atlas",
+  "version": "1.0.0",
+  "description": "The CV-Atlas project",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "cv",
+    "atlas",
+    "zenex",
+    "recruiters"
+  ],
+  "author": "Ali <ali@zenex.co>",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-casperjs": "0.0.7",
+    "gulp-eslint": "^4.0.2",
+    "gulp-mocha": "^5.0.0",
+    "gulp-phpcbf": "^0.1.2",
+    "gulp-phpcs": "^2.1.0",
+    "gulp-phpspec": "^0.5.5",
+    "gulp-phpunit": "^0.25.0",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.3.1",
+    "materialize-css": "^0.100.2"
+  }
+}
