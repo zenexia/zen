@@ -14,7 +14,7 @@ class Home extends ViewController
 {
 
     public function index(){
-        $this->response->setView('public/home')->with(['lang' => $this->request->getParam('lang')]);
+        $this->response->setView('home')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){
 
