@@ -9,6 +9,7 @@
 namespace zen\mvc\controllers;
 
 use zen\http\{RequestInterface, ResponseInterface};
+use zen\session\Session;
 
 class Secure implements ControllerInterface
 {
@@ -19,7 +20,8 @@ class Secure implements ControllerInterface
     {
         $this->request = $request;
         $this->response = $response;
-        if(!isset($_SESSION['user'])){
+        $s = new Session();
+        if(!$s->has("user")){
            return $this->response->redirect("login");
         }
 

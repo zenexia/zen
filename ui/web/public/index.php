@@ -2,6 +2,9 @@
 require __DIR__ . '/../../../vendor/autoload.php';
 
 use zen\hiro\apps\web\App;
+use zen\session\Session;
+
+$s = new Session();
 
 $app = new App(dirname(dirname(__FILE__)));
 

@@ -8,13 +8,13 @@
 
 namespace web\controllers;
 
-use Hiro\Controllers\ViewController;
+use zen\mvc\controllers\Secure;
 
-class Dashboard extends ViewController
+class Dashboard extends Secure
 {
 
     public function index(){
-        $this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
+        $this->response->setView('dashboard/index')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){
 

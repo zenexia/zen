@@ -9,12 +9,20 @@
 namespace web\controllers;
 
 use zen\mvc\controllers\ViewController;
+use zen\session\Session;
 
 class Auth extends ViewController
 {
 
-    public function storeu(){
-        $this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
+    public function store(){
+
+        // Check Auth;
+        $s = new Session();
+        $s->set("user", 8347);
+        return $this->response->redirect("dashboard");
+
+
+        //$this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){
 

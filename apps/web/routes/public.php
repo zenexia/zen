@@ -13,7 +13,11 @@ $rc->add(new RouteRedirect('/', '/{lang}'));
 $rc->add(new RouteAction('/{lang}', 'Home'));
 
 // Timesheet page
+$rc->add(new RouteAction('/{lang}/dashboard', 'Dashboard'));
+
 $rc->add(new RouteAction('/{lang}/time-sheets', 'TimeSheet'));
+
+$rc->add(new RouteAction('/{lang}/logout', 'Logout'));
 
 
 //login form
