@@ -3,14 +3,18 @@
     "description": "The CV-Atlas application project to manage resume and help recruiters with their day to day work.",
     "type": "project",
     "require": {
-        "zenex/hiro": "^0.1.2",
+        "zenex/hiro": "^0.1.6",
         "phpoffice/phpspreadsheet": "^1.1"
     },
     "require-dev": {
-        "phpunit/php-token-stream": "^3.0",
         "phpunit/phpunit": "^7.0",
         "phpspec/phpspec": "^4.3"
-
+    },
+    "autoload": {
+        "psr-4": {
+            "Apps\\": "apps/",
+            "CVAtlas\\": "CVAtlas/"
+        }
     },
     "license": "Proprietry License. All rights reserved.",
     "authors": [
