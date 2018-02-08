@@ -8,7 +8,7 @@
 
 namespace web\controllers;
 
-use zen\controllers\ViewController;
+use zen\mvc\controllers\ViewController;
 
 class Home extends ViewController
 {

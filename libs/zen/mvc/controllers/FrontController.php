@@ -6,7 +6,7 @@
  * Time: 20:03
  */
 
-namespace zen\controllers;
+namespace zen\mvc\controllers;
 
 use zen\http\{RequestInterface, ResponseInterface};
 use zen\routing\{RouterInterface, DispatcherInterface};

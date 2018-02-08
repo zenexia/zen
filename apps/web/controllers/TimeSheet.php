@@ -8,7 +8,7 @@
 
 namespace web\controllers;
 
-use zen\controllers\Secure;
+use zen\mvc\controllers\Secure;
 
 class TimeSheet extends Secure
 {

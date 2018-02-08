@@ -17,7 +17,7 @@ $rc->add(new RouteAction('/{lang}/time-sheets', 'TimeSheet'));
 
 
 //login form
-$rc->add(new RouteAction('/{lang}/login', 'Auth', 'formLogin'));
+$rc->add(new RouteResource('/{lang}/login', 'Auth', ["index", "save"]));
 
 // process login
 $rc->add(new RouteAction(

@@ -7,10 +7,8 @@
  * Time: 20:11
  */
 namespace zen\routing;
-use Hiro\Controllers\ControllerInterface;
-use Hiro\Controllers\ControllerNotFoundException;
-use zen\http\RequestInterface;
-use zen\http\ResponseInterface;
+use zen\mvc\controllers\{ControllerInterface, ControllerNotFoundException};
+use zen\http\{RequestInterface, ResponseInterface};
 
 class RouteResource extends Route
 {
@@ -46,8 +44,19 @@ class RouteResource extends Route
         return new $controller($request, $response);
     }
 
-    public function getAction(){
-        return $this->action;
+    public function getAction(RequestInterface $request){
+        $m = $request->getMethod();
+        $action = "index";
+        switch($m)
+        {
+            case "GET":
+                $action = "index";
+                break;
+            case "POST":
+                $action = "store";
+                break;
+        }
+        return $action;
     }
 
 }

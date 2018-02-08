@@ -28,7 +28,7 @@ class Dispatcher implements DispatcherInterface
             $response->redirect($tunedUrl);
         }else{
             $controller = $route->getController($request, $response);
-            $action = $route->getAction();
+            $action = $route->getAction($request);
             $params = [];
             call_user_func_array([$controller, 'before'], $params);
             call_user_func_array([$controller, $action], $params);

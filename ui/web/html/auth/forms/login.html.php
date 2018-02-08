@@ -7,11 +7,17 @@
 <body>
 <h1>Hello ...</h1>
 <h3>
-<?php
-echo date("Y-m-d H:i:s");
-
-?>
+Login
 </h3>
 Login Form
+<form method="post" action="login">
+    <label>login ID
+    <input type="email" placeholder="email">
+    </label>
+    <label>Password
+        <input type="password" placeholder="password">
+    </label>
+    <input type="submit" value="GO">
+</form>
 </body>
 </html>

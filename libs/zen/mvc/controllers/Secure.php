@@ -6,12 +6,11 @@
  * Time: 20:02
  */
 
-namespace zen\controllers;
-
+namespace zen\mvc\controllers;
 
 use zen\http\{RequestInterface, ResponseInterface};
 
-class ViewController implements ControllerInterface
+class Secure implements ControllerInterface
 {
     protected $request;
     protected $response;
@@ -20,6 +19,9 @@ class ViewController implements ControllerInterface
     {
         $this->request = $request;
         $this->response = $response;
+        if(!isset($_SESSION['user'])){
+           return $this->response->redirect("login");
+        }
 
     }
     public function before(){

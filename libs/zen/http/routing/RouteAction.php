@@ -7,7 +7,7 @@
  * Time: 20:11
  */
 namespace zen\routing;
-use zen\controllers\{ControllerInterface, ControllerNotFoundException};
+use zen\mvc\controllers\{ControllerInterface, ControllerNotFoundException};
 
 use zen\http\RequestInterface;
 use zen\http\ResponseInterface;

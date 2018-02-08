@@ -6,7 +6,7 @@
  * Time: 20:02
  */
 
-namespace zen\controllers;
+namespace zen\mvc\controllers;
 
 
 class Controller

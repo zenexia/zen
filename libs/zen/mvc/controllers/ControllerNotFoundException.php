@@ -6,7 +6,7 @@
  * Time: 18:14
  */
 
-namespace zen\controllers;
+namespace zen\mvc\controllers;
 
 
 class ControllerNotFoundException extends \Exception

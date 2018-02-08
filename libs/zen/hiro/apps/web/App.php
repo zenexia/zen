@@ -12,7 +12,7 @@ use zen\hiro\apps\AppInterface;
 use zen\hiro\apps\Application;
 use zen\http\{Request, Response};
 use zen\routing\{Router,Dispatcher};
-use zen\controllers\FrontController;
+use zen\mvc\controllers\FrontController;
 
 
 class App extends Application implements AppInterface

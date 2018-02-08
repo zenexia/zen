@@ -8,18 +8,18 @@
 
 namespace web\controllers;
 
-use zen\controllers\ViewController;
+use zen\mvc\controllers\ViewController;
 
 class Auth extends ViewController
 {
 
-    public function index(){
+    public function storeu(){
         $this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){
 
     }
-    public function formLogin()
+    public function index()
     {
         $this->response->setView('auth/forms/login')->with(['lang' => $this->request->getParam('lang')]);
     }
