@@ -6,15 +6,15 @@
  * Time: 20:31
  */
 
-namespace Apps\Web\Controllers\Home;
+namespace web\controllers;
 
 use Hiro\Controllers\ViewController;
 
-class IndexController extends ViewController
+class Dashboard extends ViewController
 {
 
     public function index(){
-        $this->response->setView('home/index')->with(['lang' => $this->request->getParam('lang')]);
+        $this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){
 

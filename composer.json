@@ -11,10 +11,7 @@
         "phpspec/phpspec": "^4.3"
     },
     "autoload": {
-        "psr-4": {
-            "Apps\\": "apps/",
-            "CVAtlas\\": "CVAtlas/"
-        }
+        "classmap":["apps/", "wisdom/", "libs/"]
     },
     "license": "Proprietry License. All rights reserved.",
     "authors": [
