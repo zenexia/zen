@@ -11,6 +11,11 @@
 echo date("Y-m-d H:i:s");
 
 ?>
+
 </h3>
+Timesheets
+<a href="dashboard">Dashboard</a>
+
+<a href="logout">logout</a>
 </body>
 </html>

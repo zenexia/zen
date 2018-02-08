@@ -1,8 +1,8 @@
 <?php
-use Hiro\Routing\RouteCollection;
-use Hiro\Routing\RouteRedirect;
-use Hiro\Routing\RouteAction;
-use Hiro\Routing\RouteResource;
+use zen\routing\RouteCollection;
+use zen\routing\RouteRedirect;
+use zen\routing\RouteAction;
+use zen\routing\RouteResource;
 
 $rc =  new RouteCollection();
 
@@ -10,14 +10,18 @@ $rc =  new RouteCollection();
 $rc->add(new RouteRedirect('/', '/{lang}'));
 
 // landing page
-$rc->add(new RouteAction('/{lang}', 'Home\Index'));
+$rc->add(new RouteAction('/{lang}', 'Home'));
 
 // Timesheet page
-$rc->add(new RouteAction('/{lang}/timesheets', 'TimeSheets\Index'));
+$rc->add(new RouteAction('/{lang}/dashboard', 'Dashboard'));
+
+$rc->add(new RouteAction('/{lang}/time-sheets', 'TimeSheet'));
+
+$rc->add(new RouteAction('/{lang}/logout', 'Logout'));
 
 
 //login form
-$rc->add(new RouteAction('/{lang}/login', 'Authentication\Index', 'formLogin'));
+$rc->add(new RouteResource('/{lang}/login', 'Auth', ["index", "save"]));
 
 // process login
 $rc->add(new RouteAction(

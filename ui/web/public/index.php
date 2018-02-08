@@ -1,9 +1,13 @@
 <?php
 require __DIR__ . '/../../../vendor/autoload.php';
-use Hiro\Apps\WebApplication;
 
-$app = new WebApplication(dirname(dirname(__FILE__)));
+use zen\hiro\apps\web\App;
+use zen\session\Session;
 
-$app->addRoutes("../../../apps/Web/routes/public.php");
+$s = new Session();
+
+$app = new App(dirname(dirname(__FILE__)));
+
+$app->addRoutes("../../../apps/web/routes/public.php");
 
 $app->run("/html/");

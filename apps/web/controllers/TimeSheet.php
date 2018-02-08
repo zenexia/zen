@@ -6,11 +6,11 @@
  * Time: 20:31
  */
 
-namespace Apps\Web\Controllers\TimeSheets;
+namespace web\controllers;
 
-use Hiro\Controllers\RestrictedController;
+use zen\mvc\controllers\Secure;
 
-class IndexController extends RestrictedController
+class TimeSheet extends Secure
 {
 
     public function index(){
