@@ -1,0 +1,109 @@
+@media screen and (min-width: 30em) and (orientation: landscape) {
+    * {
+        box-sizing: border-box;
+    }
+    html, body {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: grid;
+        grid-template-rows: 50px 1fr 18px;
+        grid-template-columns: 220px 1fr;
+        overflow-x: hidden;
+    }
+    header {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 2;
+        display: flex;
+    }
+    nav {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        overflow: hidden;
+    }
+    .side-nav-links {
+        position: absolute;
+        overflow-y: auto;
+        max-height: calc(100vh - 70px);
+        max-width: 220px;
+        padding: 0.5em;
+    }
+
+    main {
+        grid-row: 2 / span 1;
+        grid-column: 2/ span 1;
+        overflow: hidden;
+    }
+    .main-content {
+        overflow-y: auto;
+        max-height: calc(100vh - 70px);
+        padding: 1em;
+    }
+    footer {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 2;
+        text-align: center;
+        color: whitesmoke;
+        background-color: #456881;
+        font-size: small;
+    }
+    .logo-header {
+        width: 220px;
+        height: 100%;
+        font-size: xx-large;
+        border-right: 1px solid #1c3b53;
+        padding: 0.2em;
+    }
+
+    .content-header {
+        text-align: right;
+        border-left: 1px solid #496e8a;
+        height: 100%;
+        flex: auto;
+    }
+
+    .side-nav-links:hover::-webkit-scrollbar {
+        width: 5px;
+    }
+    .side-nav-links:hover::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .side-nav-links:hover::-webkit-scrollbar-thumb {
+        background: grey;
+    }
+    .main-content:hover::-webkit-scrollbar {
+        width: 5px;
+    }
+    .main-content:hover::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .main-content:hover::-webkit-scrollbar-thumb {
+        background: grey;
+    }
+
+    /* width */
+    .main-content::-webkit-scrollbar {
+        width: 1px;
+    }
+    .side-nav-links::-webkit-scrollbar {
+        width: 1px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: lightgrey;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: darkslategray;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: darkslategrey;
+    }
+}
