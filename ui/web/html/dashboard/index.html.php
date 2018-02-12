@@ -1466,6 +1466,6 @@ Share-Alike</a> 3.0</span> (most text also dual-licensed under <a href="/wiki/GF
     </aside>
 </main>
 
-<footer>Copyright (c) 1998</footer>
+<footer>Copyright (c) cvatlas 1998-<?php echo date("Y"); ?></footer>
 </body>
 </html>
