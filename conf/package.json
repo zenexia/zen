@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
+    "unit-test": "gulp unit-test",
     "build": "gulp build",
     "preinstall": "rm -rf ./node_modules",
     "postinstall": "rm -rf ../external-libraries/node_modules && mv ./node_modules ../external-libraries/ && cp package.json ../external-libraries/ && cp package-lock.json ../external-libraries/ && ln -s ../external-libraries/node_modules ./node_modules && rm -rf ./etc"
