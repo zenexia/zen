@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.51 75.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a1f2b;
+      }
+
+      .cls-2 {
+        font-size: 72px;
+        font-family: Copperplate, Copperplate;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <rect class="cls-1" y="5.16" width="115" height="68"/>
+  <text class="cls-2" transform="translate(6.42 55.8)"><tspan class="cls-3">CV</tspan><tspan x="100.01" y="0" xml:space="preserve"> Atlas</tspan></text>
+</svg>

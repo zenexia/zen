@@ -295,12 +295,14 @@
         font-size: xx-large;
     }
     header {
-        background-color: #2a3f44;
         position: fixed;
         top: 0px;
         border-bottom: 1px #e0e5e9 solid;
         box-shadow: 0 3px 2px rgba(0, 0, 0, 0.04);
         width: 100vw;
+        z-index: 1;
+        /*background: linear-gradient(90deg, white, #29a);*/
+        background-color: #232f3e;
     }
     .banner {
         margin-top: 2em;
