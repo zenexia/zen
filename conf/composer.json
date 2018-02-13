@@ -2,6 +2,9 @@
     "name": "zenex/cv-atlas",
     "description": "The CV-Atlas application project to manage resume and help recruiters with their day to day work.",
     "type": "project",
+    "config": {
+        "vendor-dir": "../external-libraries/"
+    },
     "require": {
         "zenex/hiro": "^0.1.6",
         "phpoffice/phpspreadsheet": "^1.1",
@@ -14,7 +17,7 @@
         "phpspec/phpspec": "^4.3"
     },
     "autoload": {
-        "classmap":["apps/", "wisdom/", "libs/"]
+        "classmap":["../apps/", "../business-logic/", "../libs/"]
     },
     "license": "Proprietry License. All rights reserved.",
     "authors": [
