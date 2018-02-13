@@ -1,0 +1,4 @@
+name: DBAL Migrations
+migrations_namespace: migrations
+table_name: migrations
+migrations_directory: /../migrations/
