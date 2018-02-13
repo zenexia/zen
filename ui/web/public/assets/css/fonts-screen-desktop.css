@@ -1,0 +1,34 @@
+@media screen and (min-width: 30em) and (orientation: landscape) {
+    body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    }
+
+    .content {
+        border: 1px solid blanchedalmond;
+    }
+
+    .side-nav{
+        background: #edf2f7;
+
+    }
+    a, a:visited {
+        color: #30739C;
+    }
+    #table-of-contents ul {
+        list-style: none;
+    }
+    header{
+        border-bottom: 1px solid #ddd;
+        background: #2A4E68;
+        color: #edf2f7;
+    }
+    .content-header a, .content-header a:visited{
+        color: #edf2f7;
+        text-decoration: none;
+        padding-right: 1em;
+    }
+    .content-header{
+        padding: 1em;
+    }
+
+}
