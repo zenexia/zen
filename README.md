@@ -32,6 +32,14 @@ or
 npm --prefix ./conf update
 ```
 
+## Testing
+
+To run unit tests
+
+```
+npm --prefix ./conf run unit-test
+```
+
 ## Folder naming options
 
 ### core domain
