@@ -92,3 +92,26 @@ npm --prefix ./conf run unit-test
 - zen/cache/{memcashed}
 - zen/primitives{nonemptystring, money, entityID, positiveinteger, emailaddress, validemailaddress, validDate, validDateTime, validTimeStamp, pastDate, futureDate,  }
 - zen/view
+
+## re-order suggest
+
+- core-logic
+  - services
+- apps
+  - services
+  - cli
+  - web
+    - controllers
+    - routes
+    - ui 
+      - views
+      - html
+      - pages
+      - public
+    - public
+      - index.php
+      - libs
+      - assets
+        - js
+        - css
+        - img  
