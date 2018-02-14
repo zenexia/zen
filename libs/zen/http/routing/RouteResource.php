@@ -16,7 +16,7 @@ class RouteResource extends Route
     protected $controller;
     protected $actions;
     protected $splitAjax;
-    const BASE_PATH = 'web-root\controllers\\';
+    const BASE_PATH = 'web\controllers\\';
 
     public function __construct(
         string $path,

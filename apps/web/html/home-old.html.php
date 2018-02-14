@@ -5,72 +5,86 @@
     <meta charset="UTF-8">
     <title>CV Atlas:: recruiting, hiring & job hunting redefined</title>
     <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/home2.css">
+    <link rel="stylesheet" href="/assets/css/landing-page.css">
     <link rel="shortcut icon" href="/assets/img/cvatlas-logo.png?v=1">
 </head>
 <body>
-<header>
+<header class="opt5 fixed">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
 
-    <svg viewBox="0 0 100 50" width="120">
-        <svg id="logosvg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1088.35 460.79">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: #2b687f;
-                    }
+            <svg id="logosvg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1088.35 460.79">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #2b687f;
+                        }
 
-                    .cls-2, .cls-6 {
-                        fill: #4d4d4d;
-                    }
-                    .cls-6 {
-                        fill: #f08804;
-                    }
+                        .cls-2, .cls-6 {
+                            fill: #4d4d4d;
+                        }
+                        .cls-6 {
+                            fill: #f08804;
+                        }
 
-                    .cls-3, .cls-5 {
-                        fill: #fff;
-                    }
+                        .cls-3, .cls-5 {
+                            fill: #fff;
+                        }
 
-                    .cls-3, .cls-4 {
-                        stroke: #4d4d4d;
-                        stroke-miterlimit: 10;
-                        stroke-width: 10px;
-                    }
+                        .cls-3, .cls-4 {
+                            stroke: #4d4d4d;
+                            stroke-miterlimit: 10;
+                            stroke-width: 10px;
+                        }
 
-                    .cls-4 {
-                        fill: none;
-                    }
+                        .cls-4 {
+                            fill: none;
+                        }
 
-                    .cls-5 {
-                        font-size: 239.13px;
-                        font-family: Copperplate, Copperplate;
-                    }
+                        .cls-5 {
+                            font-size: 239.13px;
+                            font-family: Copperplate, Copperplate;
+                        }
 
-                    .cls-6 {
-                        letter-spacing: 0em;
-                    }
-                </style>
-            </defs>
-            <title>cvatlas</title>
-            <path class="cls-1" d="M578.71,277.13a32.74,32.74,0,0,0-20.7,4.29,24.05,24.05,0,0,0-9.29,19V308l31.56,1.39Z" transform="translate(-548.72 -117)"/>
-            <rect class="cls-1" y="183.41" width="66.36" height="221.33"/>
-            <path class="cls-2" d="M900.29,277.13h-34.1V263.08A27.07,27.07,0,0,0,839.14,236h-76.5a27.11,27.11,0,0,0-27.1,27.11v14.05H578.71a12.53,12.53,0,0,0-12.49,12.49V534.2l40.85,6.25-3.31,19H765.2L912.78,426.09V289.62A12.53,12.53,0,0,0,900.29,277.13Z" transform="translate(-548.72 -117)"/>
-            <rect class="cls-3" x="30.05" y="42.82" width="224.96" height="381.57"/>
-            <path class="cls-1" d="M598.45,559.43c-13.06,0-26.17-.37-34.6-6.87a38.89,38.89,0,0,1-15.12-30.85V509.22h17.49v10.49a12,12,0,0,0,6.25,10.93,12,12,0,0,0,17-8.31l-4.25,20.43a13.82,13.82,0,0,0,10.66,16.38A14.2,14.2,0,0,0,598.45,559.43Z" transform="translate(-548.72 -117)"/>
-            <rect class="cls-3" x="48.01" y="24.35" width="224.96" height="381.57"/>
-            <rect class="cls-3" x="66.88" y="5" width="224.96" height="381.57"/>
-            <path class="cls-1" d="M987.42,349.08,945.7,548.38a13.89,13.89,0,0,1-13.55,11H598.82a13.87,13.87,0,0,1-13.55-16.74l4.25-20.36L627,343.4a13.9,13.9,0,0,1,13.55-11H973.87a13.83,13.83,0,0,1,13.85,13.79A14,14,0,0,1,987.42,349.08Z" transform="translate(-548.72 -117)"/>
-            <rect class="cls-3" x="90.19" y="35.42" width="65.91" height="76.45"/>
-            <line class="cls-4" x1="190.37" y1="53.88" x2="266.82" y2="53.88"/>
-            <line class="cls-4" x1="89.81" y1="148.78" x2="266.82" y2="148.78"/>
-            <line class="cls-4" x1="190.37" y1="96.12" x2="266.82" y2="96.12"/>
-            <line class="cls-4" x1="89.81" y1="190.63" x2="266.82" y2="190.63"/>
-            <text class="cls-5" transform="translate(78.28 395.51)">CV<tspan class="cls-6" x="332.15" y="0">Atlas</tspan></text>
-        </svg>
-    </svg>
-    <a class="topnav-links" href="#">Pricing</a>
-    <a class="topnav-links" href="#">Signup</a>
-    <a class="topnav-links" href="en-US/login">Login</a>
-    <a class="topnav-links"  href="#">Contact</a>
+                        .cls-6 {
+                            letter-spacing: 0em;
+                        }
+                    </style>
+                </defs>
+                <title>cvatlas</title>
+                <path class="cls-1" d="M578.71,277.13a32.74,32.74,0,0,0-20.7,4.29,24.05,24.05,0,0,0-9.29,19V308l31.56,1.39Z" transform="translate(-548.72 -117)"/>
+                <rect class="cls-1" y="183.41" width="66.36" height="221.33"/>
+                <path class="cls-2" d="M900.29,277.13h-34.1V263.08A27.07,27.07,0,0,0,839.14,236h-76.5a27.11,27.11,0,0,0-27.1,27.11v14.05H578.71a12.53,12.53,0,0,0-12.49,12.49V534.2l40.85,6.25-3.31,19H765.2L912.78,426.09V289.62A12.53,12.53,0,0,0,900.29,277.13Z" transform="translate(-548.72 -117)"/>
+                <rect class="cls-3" x="30.05" y="42.82" width="224.96" height="381.57"/>
+                <path class="cls-1" d="M598.45,559.43c-13.06,0-26.17-.37-34.6-6.87a38.89,38.89,0,0,1-15.12-30.85V509.22h17.49v10.49a12,12,0,0,0,6.25,10.93,12,12,0,0,0,17-8.31l-4.25,20.43a13.82,13.82,0,0,0,10.66,16.38A14.2,14.2,0,0,0,598.45,559.43Z" transform="translate(-548.72 -117)"/>
+                <rect class="cls-3" x="48.01" y="24.35" width="224.96" height="381.57"/>
+                <rect class="cls-3" x="66.88" y="5" width="224.96" height="381.57"/>
+                <path class="cls-1" d="M987.42,349.08,945.7,548.38a13.89,13.89,0,0,1-13.55,11H598.82a13.87,13.87,0,0,1-13.55-16.74l4.25-20.36L627,343.4a13.9,13.9,0,0,1,13.55-11H973.87a13.83,13.83,0,0,1,13.85,13.79A14,14,0,0,1,987.42,349.08Z" transform="translate(-548.72 -117)"/>
+                <rect class="cls-3" x="90.19" y="35.42" width="65.91" height="76.45"/>
+                <line class="cls-4" x1="190.37" y1="53.88" x2="266.82" y2="53.88"/>
+                <line class="cls-4" x1="89.81" y1="148.78" x2="266.82" y2="148.78"/>
+                <line class="cls-4" x1="190.37" y1="96.12" x2="266.82" y2="96.12"/>
+                <line class="cls-4" x1="89.81" y1="190.63" x2="266.82" y2="190.63"/>
+                <text class="cls-5" transform="translate(78.28 395.51)">CV<tspan class="cls-6" x="332.15" y="0">Atlas</tspan></text>
+            </svg>
+
+            <svg viewBox="0 0 100 50" width="120">
+                <use xlink:href="#logosvg"></use>
+            </svg>
+            <a class="navbar-brand" href="/en-US">
+
+            </a>
+
+            <a class="topnav-links" href="#">Pricing</a>
+            <a class="topnav-links" href="#">Signup</a>
+            <a class="topnav-links" href="en-US/time-sheets">Login</a>
+            <a class="topnav-links"  href="#">Contact</a>
+
+
+        </div>
+    </nav>
+    <!-- End Navigation -->
 </header>
 
 <div class="banner">
@@ -309,6 +323,7 @@
     </div>
 </section>
 
+
 <section class="latest-stories faq-sec padding-lg white-bg">
     <div class="container">
         <div class="row justify-content-center head-block">
@@ -480,7 +495,7 @@
     </div>
 </section>
 
-<footer>
+<footer class="page-footer">
     <div class="footer-container">
 
         <div class="footer-top">
@@ -649,7 +664,5 @@
     </script>
     <script href="/libs/bootstrap/dist/js/bootstrap.js">
     </script>
-</footer>
-
 </body>
 </html>
