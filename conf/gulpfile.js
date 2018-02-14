@@ -8,9 +8,14 @@ var gutil = require('gulp-util');
 var mocha = require('gulp-mocha');
 var eslint = require('gulp-eslint');
 
-gulp.task('test-u', function () {
-    gulp.src('tests/unit/*.php')
-        .pipe(phpunit()); //run phpunit test
+gulp.task('unit-test', function () {
+
+    var options = {
+        configurationFile: './phpunit.xml',
+        debug:             true
+    };
+    gulp.src('../tests/unit/*.php')
+        .pipe(phpunit('../external-libraries/bin/phpunit', options)); //run phpunit test
 });
 
 gulp.task('test-f', function () {
@@ -35,5 +40,5 @@ gulp.task('copy-js', function () {
         './node_modules/font-awesome/fonts/**/*',
         './node_modules/materialize-css/dist/**/*',
     ], { "base" : "./node_modules" })
-        .pipe(gulp.dest('./ui/web/public/libs/'));
+        .pipe(gulp.dest('../ui/web/public/libs/'));
 });

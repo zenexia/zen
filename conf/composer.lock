@@ -303,12 +303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "1faeb780e0cdfc19f9c3d31a524be45099d1c2bb"
+                "reference": "63efa539343a8e6d296b259ca322de981b213498"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/1faeb780e0cdfc19f9c3d31a524be45099d1c2bb",
-                "reference": "1faeb780e0cdfc19f9c3d31a524be45099d1c2bb",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/63efa539343a8e6d296b259ca322de981b213498",
+                "reference": "63efa539343a8e6d296b259ca322de981b213498",
                 "shasum": ""
             },
             "require": {
@@ -370,7 +370,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2018-01-12T08:47:50+00:00"
+            "time": "2018-02-07T16:04:47+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1411,12 +1411,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "ad39fb2becfa9ddc4b23b5e85c88123462d86ef2"
+                "reference": "2870950c8eb446517e2e29acf8bbc209ed3ab0e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/ad39fb2becfa9ddc4b23b5e85c88123462d86ef2",
-                "reference": "ad39fb2becfa9ddc4b23b5e85c88123462d86ef2",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/2870950c8eb446517e2e29acf8bbc209ed3ab0e4",
+                "reference": "2870950c8eb446517e2e29acf8bbc209ed3ab0e4",
                 "shasum": ""
             },
             "require": {
@@ -1448,7 +1448,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2018-01-31T13:23:25+00:00"
+            "time": "2018-02-12T14:33:22+00:00"
         },
         {
             "name": "phpspec/php-diff",
@@ -1887,12 +1887,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "058cbcfbc80ce9f387216085d33af5c2bccd3cbf"
+                "reference": "458cb3bda3f457ade8c447d6d08c8cdcbceb0e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/058cbcfbc80ce9f387216085d33af5c2bccd3cbf",
-                "reference": "058cbcfbc80ce9f387216085d33af5c2bccd3cbf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/458cb3bda3f457ade8c447d6d08c8cdcbceb0e49",
+                "reference": "458cb3bda3f457ade8c447d6d08c8cdcbceb0e49",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-11T18:24:48+00:00"
+            "time": "2018-02-13T11:02:30+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2699,12 +2699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "4a53b727ae41982c75f8ae97380621744f8cfaa7"
+                "reference": "5a86b89a8bc438eb25976b2e8505a5ec23fbd2e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/4a53b727ae41982c75f8ae97380621744f8cfaa7",
-                "reference": "4a53b727ae41982c75f8ae97380621744f8cfaa7",
+                "url": "https://api.github.com/repos/symfony/process/zipball/5a86b89a8bc438eb25976b2e8505a5ec23fbd2e6",
+                "reference": "5a86b89a8bc438eb25976b2e8505a5ec23fbd2e6",
                 "shasum": ""
             },
             "require": {
@@ -2740,7 +2740,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-29T09:06:44+00:00"
+            "time": "2018-02-12T17:55:29+00:00"
         },
         {
             "name": "symfony/yaml",
