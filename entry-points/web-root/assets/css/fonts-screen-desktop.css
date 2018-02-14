@@ -28,7 +28,11 @@
         padding-right: 1em;
     }
     .content-header{
-        padding: 1em;
+        padding: 0.5em;
+    }
+
+    main{
+        padding: 2em;
     }
 
 }

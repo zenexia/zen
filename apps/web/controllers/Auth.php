@@ -21,7 +21,6 @@ class Auth extends ViewController
         $s->set("user", 8347);
         return $this->response->redirect("dashboard");
 
-
         //$this->response->setView('public/index')->with(['lang' => $this->request->getParam('lang')]);
     }
     public function before(){

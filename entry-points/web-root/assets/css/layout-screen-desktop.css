@@ -55,7 +55,7 @@
         height: 100%;
         font-size: xx-large;
         border-right: 1px solid #1c3b53;
-        padding: 0.2em;
+        padding-left: 0.2em;
     }
 
     .content-header {
