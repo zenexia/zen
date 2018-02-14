@@ -32,6 +32,7 @@ class App extends Application implements AppInterface
     }
 
     public function run(string $viewsPath){
+
         try{
             $request = new Request("$_SERVER[REQUEST_URI]", true);
 

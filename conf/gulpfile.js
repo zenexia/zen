@@ -40,5 +40,5 @@ gulp.task('copy-js', function () {
         './node_modules/font-awesome/fonts/**/*',
         './node_modules/materialize-css/dist/**/*',
     ], { "base" : "./node_modules" })
-        .pipe(gulp.dest('../ui/web/public/libs/'));
+        .pipe(gulp.dest('../ui/web-root/public/libs/'));
 });

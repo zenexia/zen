@@ -1,0 +1,4 @@
+name: DBAL Migrations
+migrations_namespace: schema
+table_name: schema
+migrations_directory: /../schema/
