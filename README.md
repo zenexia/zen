@@ -115,3 +115,7 @@ npm --prefix ./conf run unit-test
         - js
         - css
         - img  
+        
+        
+core, seed , essence, kernel, root, nucleus, soul, heart
+        
