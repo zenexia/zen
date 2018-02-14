@@ -9,11 +9,6 @@ $command = $argv[1];
 if ($command == "build")
 {
     exec("composer install -d=./conf");
-    exec("npm --prefix ./conf run build");
+    echo shell_exec("npm --prefix ./conf run build");
 
-}
-
-if ($command == "deploy")
-{
-    exec("composer install -d=./conf");
 }
