@@ -2,3 +2,4 @@
 .idea/
 external-libraries/
 ui/web/public/libs/
+conf/gcp-bigquery-key.json
