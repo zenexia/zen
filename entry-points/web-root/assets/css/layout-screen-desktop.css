@@ -1,12 +1,12 @@
 @media screen and (min-width: 30em) and (orientation: landscape) {
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
     html, body {
         width: 100vw;
         min-height: 100vh;
-        margin: 0;
-        padding: 0;
     }
     body {
         display: grid;

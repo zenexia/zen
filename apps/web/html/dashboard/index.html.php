@@ -25,55 +25,127 @@
 
 </header>
 <nav class="side-nav">
-    <div class="side-nav-links">
-        <h4>Bigquery</h4>
-        <ul>
-            <li class="toctree-l1">
-                <a href="javascript:getMetaData()">MetaData</a>
-            </li>
-            <li class="toctree-l1">
-                <a  href="#">Projects</a>
-            </li>
-            <li class="toctree-l1">
-                <a class="current reference internal" href="#">Tables</a>
-            </li>
-            <li class="toctree-l2">
-                <a  href="#">YAML</a>
-            </li>
-        </ul>
+
+    <div class="nav-title">
+        Projects
+        <a href="javascript:addProject()">
+        <span class="nav-btn">
+            +
+        </span>
+        </a>
     </div>
+    <div id="project-form" hidden>
+
+        <a href="javascript:closeForm(event)">
+            <div class="btn-form-close">
+                x
+            </div>
+        </a>
+        <div id="msg"></div>
+        <div class="form-fields">
+            <form id="new-project-id-form">
+                <input onfocus="clearError()" id="p-name" type="text" placeholder="New Project ID">
+            </form>
+            <input onclick="javascript:saveProject(event)" class="sub-btn" type="submit" value="ok">
+        </div>
+    </div>
+    <div style="clear: both"></div>
+
+    <ul id="projects-list" class="zen-accordion-menu">
+
+    </ul>
 </nav>
 <main>
 
-    <pre id="metadata"></pre>
-
-
-    <label>Project ID
-        <input type="text">
-    </label>
-    <input type="submit" value="+">
-    <div>
-        <ul>
-            <li>Sample Project</li>
-        </ul>
+    <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
     </div>
 
-
-    <label>Tables
-        <input type="text">
-    </label>
-    <input type="submit" value="+">
-    <div>
-        <ul>
-            <li>ProjectTables</li>
-        </ul>
-    </div>
+    <div id="project-detail"></div>
 
 </main>
 
 <footer>Copyright (c) recruit 2017-<?php echo date("Y"); ?></footer>
-<script type="text/javascript" href="/libs/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/libs/jquery/dist/jquery.js"></script>
 <script type="text/javascript">
+
+    $( document ).ready(function() {
+        $("#project-form").hide();
+        getProjectsList();
+        toggleSpinner();
+    });
+
+    function addProject() {
+        $("#project-form").slideDown();
+    }
+    function closeForm() {
+        $("#project-form").slideUp();
+        $("#p-name").val("");
+    }
+    function saveProject() {
+        let pname = $("#p-name").val();
+
+        if(!(pname.length > 0))
+        {
+            showError();
+            setTimeout(function () {
+                clearError();
+            }, 3000);
+
+        } else {
+
+            const formData = new FormData();
+            formData.append("project_name", $("#p-name").val());
+
+            /*
+            This is another way of calling the ajax with async functions
+            (async function() {
+                let response = await fetch('projects', {
+                    credentials: 'same-origin',
+                    method: 'post',
+                    body: formData
+                });
+                let json = await response.json();
+                console.log(json);
+                if(json.success){
+                    closeForm();
+                } else {
+                    showError();
+                }
+            })();
+
+            */
+
+            fetch('projects', {
+                credentials: 'same-origin',
+                method: 'post',
+                body: formData
+            }).then(function(response) {
+                return response.text();
+            }).then(function(text) {
+                document.getElementById("project-detail").innerHTML = text;
+                closeForm();
+                return text;
+            }).then(function (data) {
+                getProjectsList();
+            }).catch(function(err) {
+                console.log(err);
+            });
+        }
+    }
+
+    function showError() {
+        $("#p-name").addClass("error");
+        $("#msg").html("Empty?");
+    }
+    function clearError() {
+        $("#p-name").removeClass("error");
+        $("#msg").html("");
+    }
+
     function getMetaData() {
         fetch('metadata', {
             credentials: 'same-origin',
@@ -81,11 +153,53 @@
         }).then(function(response) {
             return response.text();
         }).then(function(text) {
-            document.getElementById("metadata").innerHTML = text;
+            document.getElementById("project-detail").innerHTML = text;
         }).catch(function(err) {
             console.log(err);
         });
     }
+
+
+    function getProjectsList() {
+        fetch('projects', {
+            credentials: 'same-origin',
+            method: 'get'
+        }).then(function(response) {
+            return response.text();
+        }).then(function(text) {
+            document.getElementById("projects-list").innerHTML = text;
+        }).catch(function(err) {
+            console.log(err);
+        });
+    }
+    function toggleSpinner() {
+        $(".sk-folding-cube").toggle();
+    }
+
+    function showProjectDetail (id) {
+        (async function() {
+            let response = await fetch('projects/' + id, {
+                credentials: 'same-origin',
+                method: 'get'
+            });
+            let txt = await response.text();
+            $("#project-detail").html(txt);
+
+        })();
+    }
+
+    function fetchDataSets(id) {
+        (async function() {
+            let response = await fetch('projects/'  + id + '/data-sets', {
+                credentials: 'same-origin',
+                method: 'get'
+            });
+            let txt = await response.text();
+            $("#project-detail").html(txt);
+
+        })();
+    }
+
 </script>
 </body>
 </html>

@@ -29,3 +29,5 @@ switch($command){
         break;
 }
 
+// -c -i = composer install, -c -u = composer update
+// -n -i = npm install, -n -u = npm update

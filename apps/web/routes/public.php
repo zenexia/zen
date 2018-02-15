@@ -17,6 +17,12 @@ $rc->add(new RouteAction('/{lang}/dashboard', 'Dashboard'));
 
 $rc->add(new RouteAction('/{lang}/metadata', 'MetaData'));
 
+$rc->add(new RouteResource('/{lang}/projects', 'Project', ["index", "save"]));
+
+$rc->add(new RouteResource('/{lang}/projects/{id}/data-sets', 'DataSet', ["index", "save", "show"]));
+
+$rc->add(new RouteResource('/{lang}/projects/{id}', 'Project', ["show"]));
+
 $rc->add(new RouteAction('/{lang}/logout', 'Logout'));
 
 
