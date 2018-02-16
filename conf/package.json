@@ -19,6 +19,7 @@
   "author": "Ali <ali@zenex.co>",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
+    "autosize": "^4.0.0",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",

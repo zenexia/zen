@@ -705,16 +705,16 @@
         },
         {
             "name": "google/cloud-core",
-            "version": "v1.16.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GoogleCloudPlatform/google-cloud-php-core.git",
-                "reference": "01ecaef1b3bd6a9eb86a79b253dbc7e78ae52c67"
+                "reference": "e4a2c1647439b50d9c48a29dc7e63daa2165e700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-core/zipball/01ecaef1b3bd6a9eb86a79b253dbc7e78ae52c67",
-                "reference": "01ecaef1b3bd6a9eb86a79b253dbc7e78ae52c67",
+                "url": "https://api.github.com/repos/GoogleCloudPlatform/google-cloud-php-core/zipball/e4a2c1647439b50d9c48a29dc7e63daa2165e700",
+                "reference": "e4a2c1647439b50d9c48a29dc7e63daa2165e700",
                 "shasum": ""
             },
             "require": {
@@ -727,6 +727,7 @@
                 "rize/uri-template": "~0.3"
             },
             "suggest": {
+                "opis/closure": "May be used to serialize closures to process jobs in the batch daemon. Please require version ^3.",
                 "symfony/lock": "Required for the Spanner cached based session pool. Please require the following commit: 3.3.x-dev#1ba6ac9"
             },
             "bin": [
@@ -751,7 +752,7 @@
                 "Apache-2.0"
             ],
             "description": "Google Cloud PHP shared dependency, providing functionality useful to all components.",
-            "time": "2018-02-01T16:15:59+00:00"
+            "time": "2018-02-15T22:55:30+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2647,12 +2648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c2442e8ce0885f1e9f221178975e5a00e30dbb63"
+                "reference": "c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c2442e8ce0885f1e9f221178975e5a00e30dbb63",
-                "reference": "c2442e8ce0885f1e9f221178975e5a00e30dbb63",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e",
+                "reference": "c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e",
                 "shasum": ""
             },
             "require": {
@@ -2719,7 +2720,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-14T05:52:20+00:00"
+            "time": "2018-02-16T06:34:03+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

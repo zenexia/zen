@@ -25,6 +25,8 @@ $rc->add(new RouteResource('/{lang}/projects/{id}', 'Project', ["show"]));
 
 $rc->add(new RouteAction('/{lang}/logout', 'Logout'));
 
+$rc->add(new RouteResource('/{lang}/tables/{id}', 'Table', ["show"]));
+$rc->add(new RouteResource('/{lang}/column-settings/{id}', 'ColumnSetting', []));
 
 //login form
 $rc->add(new RouteResource('/{lang}/login', 'Auth', ["index", "save"]));

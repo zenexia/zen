@@ -8,28 +8,29 @@
 
 namespace web\controllers;
 
-use viewmodels\projects\Listing;
+use viewmodels\Columns;
 use zen\gateways\db\MySqlGateway;
 use zen\gateways\google\BigQueryGateway;
 use zen\mvc\controllers\Secure;
 use Google\Cloud\BigQuery\BigQueryClient;
 
 
-class Project extends Secure
+class Table extends Secure
 {
 
     public function index(){
 
+
         $params = $this->request->getParams([]);
         if(isset($params["id"])){
-            return $this->show($params["id"]);
-        } else {
-            $db = $this->getDb();
-            $listView = new Listing($db);
+            $id =$params["id"];
 
-            $this->response->setView('projects/list')->with([
+            $db = $this->getDb();
+            $viewModel = new Columns($db, $id);
+
+            $this->response->setView('columns/index')->with([
                 'lang' => $this->request->getParam('lang'),
-                'vm' => $listView
+                'vm' => $viewModel
             ]);
         }
 
@@ -77,18 +78,10 @@ class Project extends Secure
             {
                 $idTable =  $db->insert("tables", ["id_project"=> $idProject, "id_dataset" => $idDataSet, "name" => $table]);
 
-                $tableInfo = $bqGateway->infoColumns($dataSet, $table);
-                $columns = $tableInfo["schema"]["fields"];
+                $columns = $bqGateway->columns($dataSet, $table);
                 foreach ($columns as $column)
                 {
-                    $idColumn =  $db->insert("table_columns", [
-                        "id_project"=> $idProject,
-                        "id_dataset" => $idDataSet,
-                        "id_table" => $idTable,
-                        "name" => $column["name"],
-                        "type" => $column["type"],
-                        "mode" => isset($column["mode"])?$column["mode"]:"NULLABLE"
-                    ]);
+                    $idColumn =  $db->insert("table_columns", ["id_project"=> $idProject, "id_dataset" => $idDataSet, "id_table" => $idTable, "name" => $column]);
                 }
             }
 

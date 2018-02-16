@@ -10,8 +10,8 @@
     }
     body {
         display: grid;
-        grid-template-rows: 50px 1fr 18px;
-        grid-template-columns: 220px 1fr;
+        grid-template-rows: 50px 1fr 21px;
+        grid-template-columns: 310px 1fr;
         overflow-x: hidden;
     }
     header {
@@ -28,7 +28,7 @@
         position: absolute;
         overflow-y: auto;
         max-height: calc(100vh - 70px);
-        max-width: 220px;
+        max-width: 310px;
         padding: 0.5em;
     }
 
@@ -51,7 +51,7 @@
         font-size: small;
     }
     .logo-header {
-        width: 220px;
+        width: 310px;
         height: 100%;
         font-size: xx-large;
         border-right: 1px solid #1c3b53;
@@ -105,5 +105,13 @@
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: darkslategrey;
+    }
+
+    #item-detail, #column-detail {
+        min-width: 50%;
+        float: left;
+    }
+    #column-detail {
+        padding-left: 3em;
     }
 }

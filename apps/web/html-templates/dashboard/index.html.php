@@ -64,12 +64,14 @@
         <div class="sk-cube3 sk-cube"></div>
     </div>
 
-    <div id="project-detail"></div>
+    <div id="item-detail"></div>
+    <div id="column-detail"></div>
 
 </main>
 
 <footer>Copyright (c) recruit 2017-<?php echo date("Y"); ?></footer>
 <script type="text/javascript" src="/libs/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/libs/autosize/dist/autosize.min.js"></script>
 <script type="text/javascript">
 
     $( document ).ready(function() {
@@ -126,7 +128,7 @@
             }).then(function(response) {
                 return response.text();
             }).then(function(text) {
-                document.getElementById("project-detail").innerHTML = text;
+                document.getElementById("item-detail").innerHTML = text;
                 closeForm();
                 return text;
             }).then(function (data) {
@@ -153,7 +155,7 @@
         }).then(function(response) {
             return response.text();
         }).then(function(text) {
-            document.getElementById("project-detail").innerHTML = text;
+            document.getElementById("item-detail").innerHTML = text;
         }).catch(function(err) {
             console.log(err);
         });
@@ -183,7 +185,7 @@
                 method: 'get'
             });
             let txt = await response.text();
-            $("#project-detail").html(txt);
+            $("#item-detail").html(txt);
 
         })();
     }
@@ -195,9 +197,45 @@
                 method: 'get'
             });
             let txt = await response.text();
-            $("#project-detail").html(txt);
+            $("#item-detail").html(txt);
 
         })();
+    }
+
+    function tableDetail(e, id) {
+        $(".current").removeClass("current");
+        $(e.target).addClass("current");
+        (async function() {
+            let response = await fetch('tables/' + id, {
+                credentials: 'same-origin',
+                method: 'get'
+            });
+            let txt = await response.text();
+            $("#item-detail").html(txt);
+
+        })();
+    }
+
+    function columnDetail(e, id) {
+        $(".current-col").removeClass("current-col");
+        $(e.target).parent().parent().parent().addClass("current-col");
+        (async function() {
+            let response = await fetch('column-settings/' + id, {
+                credentials: 'same-origin',
+                method: 'get'
+            });
+            let txt = await response.text();
+            $("#column-detail").html(txt);
+
+        })();
+    }
+
+    function editSetting(id) {
+        let original = $("#cs-" + id).text();
+        console.log(original);
+        $("#cs-" + id).html(
+            `<input type="text" value="${original}">`
+        );
     }
 
 </script>

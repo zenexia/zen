@@ -35,3 +35,7 @@ switch($command){
 // -i or --install will install a fresh server
 // -d or --deploy will deploy updates to an existing server
 // -s --schema ->
+
+// -l --lint (-j javascript , -p php , -c css, no flag, both javascript and php and css)
+
+// generate docs -d --docs -g

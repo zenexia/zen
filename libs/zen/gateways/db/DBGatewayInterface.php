@@ -11,7 +11,7 @@ namespace zen\gateways\db;
 
 interface DBGatewayInterface
 {
-    public function select(string $tableName, array $columns, array $params, int $limit, array $orderBy);
+    public function select(string $tableName, array $columns=[], array $params=[], int $limit=0, array $orderBy=[]);
 
     public function insert(string $tableName, array $data);
 

@@ -240,7 +240,7 @@
     @media only screen and (min-width: 600px) {
         .zen-accordion-menu label, .zen-accordion-menu a {
             padding: 10px 0 10px 25px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         .zen-accordion-menu label::before {
             left: 5px;
@@ -396,5 +396,75 @@
     }
     .sk-folding-cube .sk-cube4:before {
         background-color: greenyellow;
+    }
+
+    .zen-table {
+        border: 1px solid darkgrey;
+        border-collapse: collapse;
+    }
+    /*
+    .zen-table thead {
+        display: block;
+    }
+    .zen-table tbody {
+        display: block;
+        max-height: 90%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+     */
+
+    .zen-table thead tr {
+        background: #78909c;
+        border: 0;
+        border-top: 1px solid #cfd8dc;
+        color: white;
+    }
+    .zen-table th {
+        font: 500 16px/24px Roboto,sans-serif;
+        height: 48px;
+        padding: 8px;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #cfd8dc;
+    }
+
+    .zen-table tr td:nth-child(2){
+
+    }
+
+    .zen-table td {
+        padding: 8px;
+        font-size: smaller;
+        border: 1px solid #cfd8dc;
+    }
+
+    .zen-table a {
+        text-decoration: none;
+    }
+    .column-name:hover {
+        background-color: #DDE3E6;
+    }
+
+    .form-field {
+        width: 60%;
+        font-size: 1em;
+        padding: 5px;
+        float: right;
+        margin-top: -7px;
+    }
+    .clearfix {
+        clear: both;
+    }
+    .form-group {
+        padding: 10px 0 10px 0;
+        border: 1px solid lightgrey;
+        background-color: #DDE3E6;
+    }
+    nav .current {
+        background-color: lightslategray !important;
+    }
+    .current-col {
+        background-color: #DDE3E6;
     }
 }
