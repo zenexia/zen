@@ -31,3 +31,7 @@ switch($command){
 
 // -c -i = composer install, -c -u = composer update
 // -n -i = npm install, -n -u = npm update
+
+// -i or --install will install a fresh server
+// -d or --deploy will deploy updates to an existing server
+// -s --schema ->
