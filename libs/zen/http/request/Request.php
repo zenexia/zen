@@ -43,6 +43,7 @@ class Request implements RequestInterface
     }
 
     private function init(){
+
         // set GET data params
         if(!empty($_GET)){
             foreach($_GET as $key=>$val) {

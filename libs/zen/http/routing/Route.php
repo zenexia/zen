@@ -36,6 +36,7 @@ abstract class Route implements RouteInterface
     public function match(RequestInterface $request) {
 
         $matches = $this->getPathRegex();
+        //print_r($matches);
         if(!empty($matches[1])){
             return $this->fullMatch($request, $matches);
         }else{
@@ -63,7 +64,9 @@ abstract class Route implements RouteInterface
         $matching = false;
 
         $pathParts = explode('/', $this->path);
+        //print_r($pathParts);
         $urlParts =  explode('/', $uri);
+        //print_r($urlParts);
 
         $j=0;
         if(sizeof($pathParts) == sizeof($urlParts)){

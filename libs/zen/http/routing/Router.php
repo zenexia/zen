@@ -22,6 +22,7 @@ class Router implements RouterInterface
 
     public function route(RequestInterface $request, ResponseInterface $response) {
 
+        //echo "<pre>";
         $rc = $this->routes->getIterator();
         $rc->rewind();
         while($rc->valid()) {
