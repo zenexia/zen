@@ -472,6 +472,7 @@
 
     /*
     Scrollable table
+    https://stackoverflow.com/questions/21168521/scrollable-table-with-fixed-header-in-bootstrap
      */
     .zen-table table {
         width: 100%;
