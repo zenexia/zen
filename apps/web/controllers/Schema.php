@@ -8,14 +8,14 @@
 
 namespace web\controllers;
 
-use viewmodels\Columns;
+use viewmodels\SchemaView;
 use zen\gateways\db\MySqlGateway;
 use zen\gateways\google\BigQueryGateway;
 use zen\mvc\controllers\Secure;
 use Google\Cloud\BigQuery\BigQueryClient;
 
 
-class Table extends Secure
+class Schema extends Secure
 {
 
     public function index(){
@@ -23,14 +23,15 @@ class Table extends Secure
 
 
         $params = $this->request->getParams([]);
+        if(isset($params["displayType"])){
 
-        if(isset($params["id"])){
-            $id =$params["id"];
+            print_r($params);
+            $id =explode("?", $params["id"])[0];
 
             $db = $this->getDb();
-            $viewModel = new Columns($db, $id);
+            $viewModel = new SchemaView($db, $id, $params["displayType"]);
 
-            $this->response->setView('columns/index')->with([
+            $this->response->setView('schema/index')->with([
                 'lang' => $this->request->getParam('lang'),
                 'vm' => $viewModel
             ]);

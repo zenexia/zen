@@ -24,15 +24,19 @@ class ColumnSetting extends Secure
 
         $params = $this->request->getParams([]);
         if(isset($params["id"])){
-            $id =$params["id"];
+            if($this->request->isAjax()){
+                echo "Hello moto";
+            }else {
+                $id =$params["id"];
 
-            $db = $this->getDb();
-            $viewModel = new ColumnSettingView($db, $id);
+                $db = $this->getDb();
+                $viewModel = new ColumnSettingView($db, $id);
 
-            $this->response->setView('columns/settings')->with([
-                'lang' => $this->request->getParam('lang'),
-                'vm' => $viewModel
-            ]);
+                $this->response->setView('columns/settings')->with([
+                    'lang' => $this->request->getParam('lang'),
+                    'vm' => $viewModel
+                ]);
+            }
         }
 
     }
@@ -58,40 +62,29 @@ class ColumnSetting extends Secure
     public function store(){
 
         $params = $this->request->getParams([]);
-
-        $db = $this->getDb();
-        $idProject = $db->insert("projects", ["name" => $params["project_name"]]);
-
-        # Instantiates a client
-        $bqClient = new BigQueryClient([
-            'projectId' => $params["project_name"],
-            "keyFilePath" => __DIR__ . "/../../../conf/gcp-bigquery-key.json"
-        ]);
-
-        $bqGateway = new BigQueryGateway($bqClient);
-        $dataSets = $bqGateway->dataSets();
-        foreach ($dataSets as $dataSet)
-        {
-            $idDataSet =  $db->insert("data_sets", ["id_project"=> $idProject, "name" => $dataSet]);
-
-            $tables = $bqGateway->tables($dataSet);
-            foreach ($tables as $table)
-            {
-                $idTable =  $db->insert("tables", ["id_project"=> $idProject, "id_dataset" => $idDataSet, "name" => $table]);
-
-                $columns = $bqGateway->columns($dataSet, $table);
-                foreach ($columns as $column)
-                {
-                    $idColumn =  $db->insert("table_columns", ["id_project"=> $idProject, "id_dataset" => $idDataSet, "id_table" => $idTable, "name" => $column]);
-                }
-            }
-
+        if(isset($params["_method"]) && $params["_method"] == "PUT"){
+            return $this->update();
+        } else {
+            $db = $this->getDb();
+            $min = isset($params["min_vl"]) && !(empty($params["min_vl"]))?$params["min_vl"]:NULL;
+            $max = isset($params["max_vl"]) && !(empty($params["max_vl"]))?$params["max_vl"]:NULL;
+            $idCSetting =  $db->insert("column_settings", [
+                "id_column"=> $params["id"],
+                "field_label" => $params["field_label"],
+                "data_type" => $params["field_data_type"],
+                "min_vl" => $min,
+                "max_vl" => $max
+            ]);
+            echo $idCSetting;
         }
 
-        echo json_encode([
-            "success" => true,
-            "params" => $params,
-            "db-result" => 1
-        ]);
+    }
+
+    public function update()
+    {
+        $params = $this->request->getParams([]);
+        $db = $this->getDb();
+        $update = $db->update("column_settings", ["id" => $params["id"]], [$params["item_name"] => $params["item_val"]] );
+        echo $update;
     }
 }

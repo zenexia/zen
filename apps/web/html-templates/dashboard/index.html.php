@@ -6,6 +6,8 @@
     <title>Biqube :: Dashboard</title>
     <link rel="stylesheet" href="/assets/css/layout-screen-desktop.css">
     <link rel="stylesheet" href="/assets/css/fonts-screen-desktop.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
 </head>
 <body>
 
@@ -71,6 +73,7 @@
 
 <footer>Copyright (c) recruit 2017-<?php echo date("Y"); ?></footer>
 <script type="text/javascript" src="/libs/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/libs/jquery-form/dist/jquery.form.min.js"></script>
 <script type="text/javascript" src="/libs/autosize/dist/autosize.min.js"></script>
 <script type="text/javascript">
 

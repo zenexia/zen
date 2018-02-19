@@ -28,4 +28,9 @@ class Columns
         return $columns;
     }
 
+    public function tableID()
+    {
+        return $this->idTable;
+    }
+
 }

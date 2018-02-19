@@ -40,6 +40,7 @@ gulp.task('copy-js', function () {
         './node_modules/font-awesome/fonts/**/*',
         './node_modules/materialize-css/dist/**/*',
         './node_modules/autosize/dist/**/*',
+        './node_modules/jquery-form/dist/**/*',
     ], { "base" : "./node_modules" })
         .pipe(gulp.dest('../apps/web/www-root/libs/'));
 });

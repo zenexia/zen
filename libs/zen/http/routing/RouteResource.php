@@ -55,6 +55,9 @@ class RouteResource extends Route
             case "POST":
                 $action = "store";
                 break;
+            case "PUT":
+                $action = "update";
+                break;
         }
         return $action;
     }

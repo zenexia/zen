@@ -2336,12 +2336,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be"
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
-                "reference": "9f901e29c93dae4aa77c0bb161df4276f9c9a1be",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
                 "shasum": ""
             },
             "require": {
@@ -2391,7 +2391,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-11T18:49:29+00:00"
+            "time": "2018-02-19T10:16:54+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2648,12 +2648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e"
+                "reference": "fafd3c555b50f01133a51aa87c8d6479686b97f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e",
-                "reference": "c6dcaa36d76d198d20ca871d4b1eaf1c6f37e94e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fafd3c555b50f01133a51aa87c8d6479686b97f9",
+                "reference": "fafd3c555b50f01133a51aa87c8d6479686b97f9",
                 "shasum": ""
             },
             "require": {
@@ -2720,7 +2720,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-16T06:34:03+00:00"
+            "time": "2018-02-18T06:33:48+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

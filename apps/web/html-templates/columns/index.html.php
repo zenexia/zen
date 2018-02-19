@@ -1,6 +1,10 @@
 <?php
 $columns = $vm->columns();
 ?>
+<div class="btns-yaml-json">
+<a href="javascript:showSchema('yaml')">YAML</a>
+<a href="javascript:showSchema('json')">JSON</a>
+</div>
 <table class="zen-table">
     <thead>
     <tr>
@@ -20,7 +24,7 @@ $columns = $vm->columns();
         <tr>
             <td><?php echo $i; ?></td>
             <td class="column-name">
-                <a href="javascript:void(0)" onclick="columnDetail(event, <?php echo $column["id"]; ?>)">
+                <a id="column-num-<?php echo $column["id"]; ?>" href="javascript:void(0)" onclick="columnDetail(event, <?php echo $column["id"]; ?>)">
                     <div >
                         <?php echo $column["name"]; ?>
                     </div>
@@ -34,3 +38,17 @@ $columns = $vm->columns();
     ?>
     </tbody>
 </table>
+
+<script type="text/javascript">
+    function showSchema(sType) {
+
+        (async function() {
+            let response = await fetch('schema/' + <?php echo $vm->tableID(); ?> + '?displayType=' + sType, {
+                credentials: 'same-origin',
+                method: 'get'
+            });
+            let txt = await response.text();
+            $("#column-detail").html(txt);
+        })();
+    }
+</script>

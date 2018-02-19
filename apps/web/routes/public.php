@@ -28,6 +28,8 @@ $rc->add(new RouteAction('/{lang}/logout', 'Logout'));
 $rc->add(new RouteResource('/{lang}/tables/{id}', 'Table', ["show"]));
 $rc->add(new RouteResource('/{lang}/column-settings/{id}', 'ColumnSetting', []));
 
+$rc->add(new RouteResource('/{lang}/schema/{id}', 'Schema', ["show"]));
+
 //login form
 $rc->add(new RouteResource('/{lang}/login', 'Auth', ["index", "save"]));
 

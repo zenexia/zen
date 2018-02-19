@@ -32,7 +32,7 @@
     }
 
     main{
-        padding: 2em;
+        padding: 2em 2em 1em 2em;
     }
     .nav-title {
         padding: 1em;
@@ -398,7 +398,7 @@
         background-color: greenyellow;
     }
 
-    .zen-table {
+    .zen-table, .simple-table {
         border: 1px solid darkgrey;
         border-collapse: collapse;
     }
@@ -414,13 +414,13 @@
     }
      */
 
-    .zen-table thead tr {
+    .zen-table thead tr, .simple-table thead tr {
         background: #78909c;
         border: 0;
         border-top: 1px solid #cfd8dc;
         color: white;
     }
-    .zen-table th {
+    .zen-table th, .simple-table th {
         font: 500 16px/24px Roboto,sans-serif;
         height: 48px;
         padding: 8px;
@@ -433,13 +433,13 @@
 
     }
 
-    .zen-table td {
+    .zen-table td, .simple-table td {
         padding: 8px;
         font-size: smaller;
         border: 1px solid #cfd8dc;
     }
 
-    .zen-table a {
+    .zen-table a, .simple-table a {
         text-decoration: none;
     }
     .column-name:hover {
@@ -467,4 +467,91 @@
     .current-col {
         background-color: #DDE3E6;
     }
+
+
+
+    /*
+    Scrollable table
+     */
+    .zen-table table {
+        width: 100%;
+    }
+
+    .zen-table thead, .zen-table tbody, .zen-table tr, .zen-table td, .zen-table th { display: block; }
+
+    .zen-table tr:after {
+        content: ' ';
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    .zen-table thead th {
+
+
+        /*
+        text-align: left;
+        height: 30px;
+        */
+    }
+
+    .zen-table tbody {
+        height: 75vh;
+        overflow-y: auto;
+    }
+
+    .zen-table thead {
+        /* fallback */
+    }
+
+
+    .zen-table tbody td, .zen-table thead th {
+        width: 21%;
+        float: left;
+    }
+    .zen-table tbody td:nth-child(1), .zen-table thead th:nth-child(1){
+        width:8%;
+    }
+    .zen-table tbody td:nth-child(2), .zen-table thead th:nth-child(2){
+        width:50%;
+    }
+
+    .create-settings-form{
+        font-size: smaller;
+    }
+
+    .left-data {
+        float: left;
+    }
+    .right-data {
+        float: right;
+    }
+
+    .edit-btn a {
+        color: #ffc107;
+        padding: 7px;
+    }
+    .del-btn a {
+        color: #dc3545;
+        padding: 7px;
+    }
+
+    .save-btn a {
+        color: #28a745;
+        padding: 7px;
+    }
+
+    .d-field {
+        width: 100%;
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .btns-yaml-json {
+        font-size: smaller;
+    }
+    .btns-yaml-json a {
+        text-decoration: none;
+    }
+
 }

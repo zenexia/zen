@@ -125,4 +125,13 @@ abstract class PdoAdapter
         return $rows;
 
     }
+
+    public function countAffectedRows() {
+        try {
+            return $this->getStatement()->rowCount();
+        }
+        catch (PDOException $e) {
+            throw new RunTimeException($e->getMessage());
+        }
+    }
 }

@@ -32,11 +32,22 @@ class ColumnSettingView
         return $this->idColumn;
     }
 
-    public function columnType()
+    private function getColumn()
     {
         $columns = $this->db->select("table_columns", [], ["id" => $this->idColumn]);
-        $column = array_shift($columns);
+        return array_shift($columns);
+    }
+
+    public function columnType():string
+    {
+        $column = $this->getColumn();
         return $column["type"];
+    }
+
+    public function columnName():string
+    {
+        $column = $this->getColumn();
+        return $column["name"];
     }
 
 }

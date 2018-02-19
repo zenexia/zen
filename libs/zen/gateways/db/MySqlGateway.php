@@ -145,6 +145,30 @@ class MySqlGateway extends PdoAdapter implements DBGatewayInterface
 
     public function update(string $tableName, array $params, array $data)
     {
+        $set = array();
+        foreach ($data as $col => $value) {
+            unset($data[$col]);
+            $data[":" . $col] = $value;
+            $set[] = $col . " = :" . $col;
+        }
+
+        $sql = "UPDATE " . $tableName . " SET " . implode(", ", $set);
+
+        $where = "";
+        if(!empty($params)){
+            $where = " WHERE ";
+            foreach ($params as $key => $val) {
+                if($where != " WHERE ") {
+                    $where .= " AND ";
+                }
+                $where .= $key . " = " . $val;
+            }
+        }
+        $sql .= $where;
+
+        return $this->prepare($sql)
+            ->execute($data)
+            ->countAffectedRows();
 
     }
 
